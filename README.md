@@ -1,46 +1,41 @@
-# ClawTrain
+# ClawTrain Core
 
 ClawTrain is an independent platform for distributing **training modules** for AI agents.
 
-A training module is a small, versioned package that adds a specific behavior or capability to an agent without modifying the underlying model.
+A training module is a small, versioned package that changes how an agent behaves,
+without modifying model weights or executing arbitrary code.
 
-ClawTrain focuses on:
-- modularity over monoliths
-- explicit permissions
-- portability across agent frameworks
-- predictable behavior
-
-This project is early and intentionally minimal.
+This repository defines the **core concepts and specifications** behind ClawTrain.
 
 ## What ClawTrain is
 
-- A way to **extend agent behavior** using discrete modules
-- A distribution layer, not a model
+- A way to extend agent behavior using modular training
+- A declarative system, not a plugin runtime
 - Framework-agnostic by design
-- Opinionated about safety and clarity
+- Focused on clarity, safety, and portability
 
 ## What ClawTrain is not
 
 - Not a chatbot
 - Not a prompt marketplace
-- Not a model fine-tuning service
-- Not a plugin system with arbitrary code execution (at least initially)
+- Not a fine-tuning service
+- Not an agent execution engine
 
 ## Core idea
 
-Agents should be trainable through **composable behaviors**, not endless prompt editing.
+Agents should be trained through **composable behaviors**, not endless prompt tweaking.
 
-Training modules are meant to be:
-- understandable
+Training modules are:
+- explicit
 - inspectable
 - reversible
 
 ## Status
 
-ClawTrain is in exploration and specification phase.
+This project is in an early specification phase.
 
-There is no public API, SDK, or marketplace yet.
-This repository defines the concepts that will eventually power those pieces.
+There is no public API or SDK yet.
+The goal of this repository is to define a solid foundation before implementation.
 
 ## Contact
 
