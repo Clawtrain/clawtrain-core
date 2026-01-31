@@ -1,0 +1,37 @@
+id: clawtrain.strict-json-output
+name: Strict JSON Output
+version: 0.1.0
+
+description: >
+  Forces the agent to respond with valid JSON only.
+  No prose, no markdown, no additional text.
+
+author:
+  name: ClawTrain
+  contact: contact@clawtrain.com
+
+compatibility:
+  agent_types:
+    - chat-agent
+    - tool-calling-agent
+
+permissions: []
+
+inputs:
+  - name: schema
+    type: json
+    description: JSON schema describing the expected output structure
+
+outputs:
+  - name: result
+    type: json
+    description: JSON output conforming to the schema
+
+behavior:
+  type: prompt
+  content: |
+    You must respond with valid JSON only.
+    Do not include explanations.
+    Do not include markdown.
+    Do not include comments.
+    If the schema cannot be satisfied, output an empty JSON object {}.
